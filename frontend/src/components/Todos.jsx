@@ -25,7 +25,6 @@ export function Todos({todos}){
                             marginTop:0,
                             marginBottom:10
                         }}>{todo.description}</h3>
-                        <button onClick={click()}>{todo.completed == true ? "Done" : "Mark as Done"}</button>
                     </div>
                 )
             })}
