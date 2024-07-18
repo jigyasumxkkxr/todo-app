@@ -14,9 +14,7 @@ function App() {
   },[])
 
   const addTodo = (newTodo) => {
-    console.log("Adding new todo to state:", newTodo);
     setTodos(prevTodos => [...prevTodos, newTodo]);
-    console.log("Updated todos state:", [...todos, newTodo]);
   };
   
 

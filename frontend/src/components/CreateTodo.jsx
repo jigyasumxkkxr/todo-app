@@ -5,7 +5,6 @@ export function CreateTodo({ addTodo }) {
     const [description, setDescription] = useState("");
 
     const handleAddTodo = () => {
-        console.log("Adding Todo:", { title, description });
         fetch("http://localhost:3000/todo", {
           method: "POST",
           body: JSON.stringify({ title, description }),
@@ -14,10 +13,9 @@ export function CreateTodo({ addTodo }) {
           .then(async (response) => {
             if (response.ok) {
               const newTodo = await response.json();
-              console.log("New Todo:", newTodo);
-              addTodo(newTodo); // Call addTodo to update state in App
+              addTodo(newTodo); 
               alert("Todo added");
-              setTitle(""); // Clear input fields
+              setTitle(""); 
               setDescription("");
             } else {
               alert("Failed to add Todo");
