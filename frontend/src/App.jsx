@@ -11,7 +11,7 @@ function App() {
         const json = await response.json();
         setTodos(json.todos);
       })
-  },[])
+  },[todos])
 
   const addTodo = (newTodo) => {
     setTodos(prevTodos => [...prevTodos, newTodo]);
